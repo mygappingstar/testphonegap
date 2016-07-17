@@ -17,7 +17,7 @@ goog.require('clojure.string');
 goog.require('app.i18n');
 if(typeof app.core.app !== 'undefined'){
 } else {
-app.core.app = (new Hoodie());
+app.core.app = (new Hoodie("http://192.168.1.21:3000"));
 }
 if(typeof app.core.market_value !== 'undefined'){
 } else {

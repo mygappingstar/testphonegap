@@ -22,8 +22,7 @@
             [javelin.core :refer [cell] :refer-macros [defc defc=]]
             [hoodie.store :as hstore :refer [add! remove! remove-all! publish! unpublish!]]))
 
-(defonce app (js/Hoodie. ;;"http://192.168.1.21:3000"
-              ))
+(defonce app (js/Hoodie. "http://192.168.1.21:3000"))
 
 (defonce market-value
   (local-storage
