@@ -1,0 +1,1 @@
+{:name boot.cljs.main27392, :doc nil, :excludes #{}, :use-macros nil, :require-macros nil, :uses nil, :requires {app.admin app.admin}, :imports nil}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>upload</title>
+</head>
+<body>
+<input name="imagefile[]" type="file" id="takePictureField" accept="image/*" onchange="uploadPhotos()" />
+<script type="text/javascript">
+window.uploadPhotos = function(){
+  var url = 'upload/00135';
+  var formData = new FormData();
+
+  // HTML file input, chosen by user
+  var fileInputElement = document.getElementById("takePictureField");
+  var file = fileInputElement.files[0];
+  formData.append("userfile", file);
+
+  // JavaScript file-like object
+  var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
+  var blob = new Blob([content], { type: "text/xml"});
+  formData.append("uploadme", blob);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+  xhr.send(formData);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{:require [app.core adzerk.boot-cljs-repl adzerk.boot-reload.init1300], :init-fns [app.core/main], :compiler-options {:source-map true}}
